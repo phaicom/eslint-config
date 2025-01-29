@@ -1,4 +1,4 @@
-import phaicomConfig from './base'
+import phaicom from './base'
 
-export { phaicomConfig }
+export { phaicom }
 export { tailwind } from './tailwind'

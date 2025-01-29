@@ -47,6 +47,6 @@ const vue = {
   },
 } satisfies OptionsConfig
 
-const phaicomConfig = { base, vue }
+const phaicom = { base, vue }
 
-export default phaicomConfig
+export default phaicom

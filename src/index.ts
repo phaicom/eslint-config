@@ -1,7 +1,7 @@
 import type { EslintConfig } from './types'
 
 import antfu from '@antfu/eslint-config'
-import { phaicomConfig, tailwind } from './configs'
+import { phaicom, tailwind } from './configs'
 
 const eslintConfig: EslintConfig = ({ phaicom: enablePhaicom = true, tailwind: enableTailwind = false, ...options }, ...configs) => {
   if (enableTailwind) {
@@ -9,9 +9,9 @@ const eslintConfig: EslintConfig = ({ phaicom: enablePhaicom = true, tailwind: e
   }
 
   if (enablePhaicom) {
-    configs.push(phaicomConfig.base)
+    configs.push(phaicom.base)
     if (options.vue) {
-      configs.push(phaicomConfig.vue)
+      configs.push(phaicom.vue)
     }
     options.unicorn = true
   }
