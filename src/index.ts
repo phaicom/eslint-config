@@ -9,11 +9,11 @@ const eslintConfig: EslintConfig = ({ phaicom: enablePhaicom = true, tailwind: e
   }
 
   if (enablePhaicom) {
+    options.unicorn = true
     configs.push(phaicom.base)
     if (options.vue) {
       configs.push(phaicom.vue)
     }
-    options.unicorn = true
   }
 
   return antfu(options, ...configs)

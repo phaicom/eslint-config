@@ -1,10 +1,12 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-import { ensurePackages, interopDefault } from '@antfu/eslint-config'
+import { interopDefault } from '@antfu/eslint-config'
 
 export async function tailwind(): Promise<TypedFlatConfigItem[]> {
-  await ensurePackages([
-    'eslint-plugin-readable-tailwind',
-  ])
+  // Cannot specify version. Might have to write the function myself
+  // or wait for the plugin to get stable.
+  // await ensurePackages([
+  //   'eslint-plugin-readable-tailwind',
+  // ])
 
   const [
     pluginTailwind,
