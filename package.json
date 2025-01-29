@@ -1,29 +1,30 @@
 {
   "name": "@phaicom/eslint-config",
   "type": "module",
-  "version": "4.1.0",
+  "version": "0.1.0",
   "packageManager": "pnpm@10.1.0",
-  "description": "My eslint config based on @antfu/eslint-config",
-  "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com>",
+  "description": "Phaicom's config based on @antfu/eslint-config",
+  "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com> (https://github.com/phaicom)",
   "license": "MIT",
   "homepage": "https://github.com/phaicom/eslint-config",
   "keywords": [
     "eslint-config"
   ],
+  "engines": {
+    "node": ">=20"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": "./bin/index.js",
   "files": [
-    "bin",
     "dist"
   ],
   "scripts": {
     "stub": "tsup",
     "dev": "npx @eslint/config-inspector --config eslint.config.ts",
-    "lint": "eslint .",
+    "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix --cache",
     "typecheck": "tsc --noEmit",
     "prepare": "npx simple-git-hooks"

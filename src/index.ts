@@ -6,9 +6,9 @@ import { baseConfig, vueConfig } from './base'
 
 const eslintConfig: EslintConfig = ({ tailwind = false, ...options }, ...configs) => {
   if (tailwind) {
-    const files: string[] = ['**/*.{js,jsx,ts,tsx,vue,astro,svelte}']
-
-    const extensionMap = {
+    const baseFiles = ['**/*.js']
+    const frameworkExtensions = {
+      typescript: ['ts'],
       react: ['jsx', options.typescript && 'tsx'],
       solid: ['jsx', options.typescript && 'tsx'],
       vue: ['vue'],
@@ -16,11 +16,12 @@ const eslintConfig: EslintConfig = ({ tailwind = false, ...options }, ...configs
       svelte: ['svelte'],
     }
 
-    for (const [framework, extensions] of Object.entries(extensionMap)) {
-      if (framework in options && options[framework as keyof typeof options]) {
-        files.push(...extensions.filter(Boolean).map((ext) => `**/*.${ext}`))
-      }
-    }
+    const files = [
+      ...baseFiles,
+      ...Object.entries(frameworkExtensions)
+        .filter(([framework]) => options[framework as keyof typeof options])
+        .flatMap(([, exts]) => exts.filter(Boolean).map((ext) => `**/*.${ext}`)),
+    ]
 
     configs.unshift({
       name: 'phaicom/tailwind',
@@ -29,8 +30,6 @@ const eslintConfig: EslintConfig = ({ tailwind = false, ...options }, ...configs
         'readable-tailwind': pluginReadableTailwind,
       },
       rules: {
-        // enable all recommended rules to warn
-        ...pluginReadableTailwind.configs.warning.rules,
         // enable all recommended rules to error
         ...pluginReadableTailwind.configs.error.rules,
       },
