@@ -1,9 +1,9 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
 import { ensurePackages, interopDefault } from '@antfu/eslint-config'
 
-export async function tailwindConfig(): Promise<TypedFlatConfigItem[]> {
+export async function tailwind(): Promise<TypedFlatConfigItem[]> {
   await ensurePackages([
-    'eslint-plugin-readable-tailwind@beta',
+    'eslint-plugin-readable-tailwind',
   ])
 
   const [

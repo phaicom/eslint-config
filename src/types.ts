@@ -6,7 +6,11 @@ type UserConfigParams = Parameters<typeof antfu>[1]
 
 export interface OptionsConfig extends AntfuOptionsConfig, AntfuTypedFlatConfigItem {
   /**
-   *
+   * Used phaicom's base rules:
+   * @default true
+   */
+  phaicom?: boolean
+  /**
    * Used recommended rules:
    * @see https://github.com/schoero/eslint-plugin-readable-tailwind
    * @default false

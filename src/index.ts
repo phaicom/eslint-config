@@ -1,51 +1,22 @@
 import type { EslintConfig } from './types'
 
 import antfu from '@antfu/eslint-config'
-import pluginReadableTailwind from 'eslint-plugin-readable-tailwind'
-import { baseConfig, vueConfig } from './configs'
+import { phaicomConfig, tailwind } from './configs'
 
-const eslintConfig: EslintConfig = ({ tailwind = false, ...options }, ...configs) => {
-  if (tailwind) {
-    const baseFiles = ['**/*.js']
-    const frameworkExtensions = {
-      typescript: ['ts'],
-      react: ['jsx', options.typescript && 'tsx'],
-      solid: ['jsx', options.typescript && 'tsx'],
-      vue: ['vue'],
-      astro: ['astro'],
-      svelte: ['svelte'],
-    }
-
-    const files = [
-      ...baseFiles,
-      ...Object.entries(frameworkExtensions)
-        .filter(([framework]) => options[framework as keyof typeof options])
-        .flatMap(([, exts]) => exts.filter(Boolean).map((ext) => `**/*.${ext}`)),
-    ]
-
-    configs.unshift({
-      name: 'phaicom/tailwind',
-      files,
-      plugins: {
-        'readable-tailwind': pluginReadableTailwind,
-      },
-      rules: {
-        // enable all recommended rules to error
-        ...pluginReadableTailwind.configs.error.rules,
-      },
-    })
-    // tailwindConfig().then((config) => {
-    //   configs.unshift(...config)
-    // })
+const eslintConfig: EslintConfig = ({ phaicom: enablePhaicom = true, tailwind: enableTailwind = false, ...options }, ...configs) => {
+  if (enableTailwind) {
+    configs.push(tailwind())
   }
 
-  const userConfigs = [
-    baseConfig,
-    ...(options.vue ? [vueConfig] : []),
-  ]
+  if (enablePhaicom) {
+    configs.push(phaicomConfig.base)
+    if (options.vue) {
+      configs.push(phaicomConfig.vue)
+    }
+    options.unicorn = true
+  }
 
-  options.unicorn = true
-  return antfu(options, ...userConfigs, ...configs)
+  return antfu(options, ...configs)
 }
 
 export default eslintConfig

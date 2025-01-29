@@ -1,8 +1,7 @@
-import phaicom from './src'
+import configs from './src'
 
-export default phaicom({
+export default configs({
   tailwind: true,
-  vue: true,
   formatters: {
     css: true,
     html: true,

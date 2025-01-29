@@ -1,6 +1,6 @@
 import type { OptionsConfig } from '../types'
 
-export const baseConfig = {
+const base = {
   name: 'phaicom/base',
   rules: {
     'curly': ['error', 'all'],
@@ -34,7 +34,7 @@ export const baseConfig = {
   },
 } satisfies OptionsConfig
 
-export const vueConfig = {
+const vue = {
   name: 'phaicom/vue',
   rules: {
     // vue rule customizations
@@ -46,3 +46,7 @@ export const vueConfig = {
     'vue/singleline-html-element-content-newline': 'off',
   },
 } satisfies OptionsConfig
+
+const phaicomConfig = { base, vue }
+
+export default phaicomConfig
