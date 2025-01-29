@@ -5,7 +5,5 @@ export default defineConfig({
     'src/index.ts',
   ],
   shims: true,
-  dts: true,
-  minify: true,
   format: ['esm'],
 })

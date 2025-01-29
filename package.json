@@ -22,17 +22,30 @@
     "dist"
   ],
   "scripts": {
+    "build": "pnpm run typegen && tsup --clean --dts",
     "stub": "tsup",
     "dev": "npx @eslint/config-inspector --config eslint.config.ts",
+    "build:inspector": "pnpm run build && npx @eslint/config-inspector build",
+    "watch": "tsup --watch",
+    "typegen": "tsx scripts/typegen.ts",
+    "prepack": "pnpm run build",
+    "release": "bumpp && pnpm publish",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix --cache",
     "typecheck": "tsc --noEmit",
     "prepare": "npx simple-git-hooks"
   },
+  "peerDependencies": {
+    "eslint-plugin-readable-tailwind": "2.0.0-beta.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-readable-tailwind": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@antfu/eslint-config": "^4.1.0",
-    "eslint": "^9.19.0",
-    "eslint-plugin-readable-tailwind": "2.0.0-beta.0"
+    "eslint": "^9.19.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -42,7 +55,8 @@
     "lint-staged": "^15.4.3",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.3.6",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "eslint-plugin-readable-tailwind": "2.0.0-beta.0"
   },
   "commitlint": {
     "extends": [

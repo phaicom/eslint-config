@@ -14,9 +14,6 @@ importers:
       eslint:
         specifier: ^9.19.0
         version: 9.19.0(jiti@2.4.2)
-      eslint-plugin-readable-tailwind:
-        specifier: 2.0.0-beta.0
-        version: 2.0.0-beta.0(eslint@9.19.0(jiti@2.4.2))(tailwindcss@4.0.0)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.6.1
@@ -30,6 +27,9 @@ importers:
       eslint-plugin-format:
         specifier: ^1.0.1
         version: 1.0.1(eslint@9.19.0(jiti@2.4.2))
+      eslint-plugin-readable-tailwind:
+        specifier: 2.0.0-beta.0
+        version: 2.0.0-beta.0(eslint@9.19.0(jiti@2.4.2))(tailwindcss@4.0.0)
       lint-staged:
         specifier: ^15.4.3
         version: 15.4.3
