@@ -2,7 +2,7 @@ import type { EslintConfig } from './types'
 
 import antfu from '@antfu/eslint-config'
 import pluginReadableTailwind from 'eslint-plugin-readable-tailwind'
-import { baseConfig, vueConfig } from './base'
+import { baseConfig, vueConfig } from './configs'
 
 const eslintConfig: EslintConfig = ({ tailwind = false, ...options }, ...configs) => {
   if (tailwind) {
@@ -34,6 +34,9 @@ const eslintConfig: EslintConfig = ({ tailwind = false, ...options }, ...configs
         ...pluginReadableTailwind.configs.error.rules,
       },
     })
+    // tailwindConfig().then((config) => {
+    //   configs.unshift(...config)
+    // })
   }
 
   const userConfigs = [

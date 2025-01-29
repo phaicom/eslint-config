@@ -1,4 +1,4 @@
-import type { OptionsConfig } from './types'
+import type { OptionsConfig } from '../types'
 
 export const baseConfig = {
   name: 'phaicom/base',
