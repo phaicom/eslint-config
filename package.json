@@ -22,12 +22,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run typegen && tsup --clean --dts",
+    "build": "tsup --clean --dts",
     "stub": "tsup",
     "dev": "npx @eslint/config-inspector --config eslint.config.ts",
     "build:inspector": "pnpm run build && npx @eslint/config-inspector build",
     "watch": "tsup --watch",
-    "typegen": "tsx scripts/typegen.ts",
     "prepack": "pnpm run build",
     "release": "bumpp && pnpm publish",
     "lint": "eslint . --cache",
