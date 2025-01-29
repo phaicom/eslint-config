@@ -8,8 +8,14 @@ phaicom's ESLint configuration.
 - Modified rules including unicorn, stylistic, Vue, etc.
 - Integrated with [eslint-plugin-readable-tailwind](https://github.com/schoero/eslint-plugin-readable-tailwind).
 
-## Usage
-To enable Tailwind just set the **tailwind** flag to true.
+## Usage with tailwind
+Start by install **eslint-plugin-readable-tailwind**
+
+```bash
+pnpm install -D eslint-plugin-readable-tailwind@beta
+```
+
+And set the **tailwind** flag to true.
 
 ```js
 import phaicom from '@phaicom/eslint-config'
