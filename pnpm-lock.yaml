@@ -28,8 +28,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-readable-tailwind:
-        specifier: 2.0.0-beta.0
-        version: 2.0.0-beta.0(eslint@9.19.0(jiti@2.4.2))(tailwindcss@4.0.0)
+        specifier: ^2.0.0-beta.1
+        version: 2.0.0-beta.1(eslint@9.19.0(jiti@2.4.2))(tailwindcss@4.0.0)
       lint-staged:
         specifier: ^15.4.3
         version: 15.4.3
@@ -1150,9 +1150,9 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  eslint-plugin-readable-tailwind@2.0.0-beta.0:
-    resolution: {integrity: sha512-oBLfXil7jhpRr/5Jc8vj0N3bKZTPeKqk79EcUAbVA99FT6HmpNx0ZI/vqAi6Tt1RTXqlEUp07R9oA+Gaato+Yw==}
-    engines: {node: '>=19'}
+  eslint-plugin-readable-tailwind@2.0.0-beta.1:
+    resolution: {integrity: sha512-zZefMqO6cvN/6UsbRWaOPDSBQmjpCOx5ZVlA0kNhemQzfaBC1Z6tIGJGyv728ktzcSMvUvIJE+miunI0IGLZMg==}
+    engines: {node: '>=v20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
       tailwindcss: ^3.3.0 || ^4.0.0
@@ -3597,7 +3597,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-readable-tailwind@2.0.0-beta.0(eslint@9.19.0(jiti@2.4.2))(tailwindcss@4.0.0):
+  eslint-plugin-readable-tailwind@2.0.0-beta.1(eslint@9.19.0(jiti@2.4.2))(tailwindcss@4.0.0):
     dependencies:
       enhanced-resolve: 5.18.0
       eslint: 9.19.0(jiti@2.4.2)
