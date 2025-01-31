@@ -7,6 +7,7 @@ const eslintConfig: EslintConfig = (options: OptionsConfig, ...configs) => {
   const {
     phaicom: enablePhaicom = true,
     tailwind: enableTailwind = false,
+    vue: enableVue,
   } = options
 
   if (enableTailwind) {
@@ -16,7 +17,7 @@ const eslintConfig: EslintConfig = (options: OptionsConfig, ...configs) => {
   if (enablePhaicom) {
     options.unicorn = true
     configs.push(phaicom.base)
-    if (options.vue) {
+    if (enableVue) {
       configs.push(phaicom.vue)
     }
   }
