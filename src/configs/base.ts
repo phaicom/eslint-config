@@ -12,21 +12,6 @@ const base = {
     //  unicorn rule customizations
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/consistent-function-scoping': 'off',
-    // ignore composable/hook based filenames, LICENSE, and README
-    'unicorn/filename-case': [
-      'error',
-      {
-        case: 'kebabCase',
-        ignore: [
-          // This regex matches files that start with 'use' followed by an uppercase letter
-          // and then any sequence of characters, ending with '.ts'. Useful for React hooks.
-          String.raw`^use[A-Z].*\.ts$`,
-          'LICENSE',
-          'README',
-          'CHANGELOG',
-        ],
-      },
-    ],
     // jsonc rule customizations
     'jsonc/sort-keys': 'off',
     // node customizations
