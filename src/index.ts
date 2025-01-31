@@ -1,9 +1,14 @@
-import type { EslintConfig } from './types'
+import type { EslintConfig, OptionsConfig } from './types'
 
 import antfu from '@antfu/eslint-config'
 import { phaicom, tailwind } from './configs'
 
-const eslintConfig: EslintConfig = ({ phaicom: enablePhaicom = true, tailwind: enableTailwind = false, ...options }, ...configs) => {
+const eslintConfig: EslintConfig = (options: OptionsConfig, ...configs) => {
+  const {
+    phaicom: enablePhaicom = true,
+    tailwind: enableTailwind = false,
+  } = options
+
   if (enableTailwind) {
     configs.push(tailwind())
   }
