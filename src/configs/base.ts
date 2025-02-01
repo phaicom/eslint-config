@@ -12,8 +12,6 @@ const base = {
     //  unicorn rule customizations
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/consistent-function-scoping': 'off',
-    // jsonc rule customizations
-    'jsonc/sort-keys': 'off',
     // node customizations
     'node/prefer-global/process': 'off',
   },
