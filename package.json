@@ -2,7 +2,7 @@
   "name": "@phaicom/eslint-config",
   "type": "module",
   "version": "0.2.10",
-  "packageManager": "pnpm@10.6.3",
+  "packageManager": "pnpm@10.6.4",
   "description": "Phaicom's config based on @antfu/eslint-config",
   "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com> (https://github.com/phaicom)",
   "license": "MIT",
