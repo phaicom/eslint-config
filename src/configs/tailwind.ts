@@ -5,24 +5,24 @@ export async function tailwind(): Promise<TypedFlatConfigItem[]> {
   // Cannot specify version. Might have to write the function myself
   // or wait for the plugin to get stable.
   // await ensurePackages([
-  //   'eslint-plugin-readable-tailwind',
+  //   'eslint-plugin-better-tailwindcss',
   // ])
 
   const [
     pluginTailwind,
   ] = await Promise.all([
-    interopDefault(import('eslint-plugin-readable-tailwind')),
+    interopDefault(import('eslint-plugin-better-tailwindcss')),
   ] as const)
 
   return [
     {
       name: 'phaicom/tailwind',
       plugins: {
-        'readable-tailwind': pluginTailwind,
+        'better-tailwindcss': pluginTailwind,
       },
       rules: {
         // enable all recommended rules to error
-        ...pluginTailwind.configs.error.rules,
+        ...pluginTailwind.configs['recommended-error'].rules,
       },
     },
   ]

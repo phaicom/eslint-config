@@ -2,7 +2,7 @@
   "name": "@phaicom/eslint-config",
   "type": "module",
   "version": "0.2.12",
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.12.3",
   "description": "Phaicom's config based on @antfu/eslint-config",
   "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com> (https://github.com/phaicom)",
   "license": "MIT",
@@ -35,26 +35,26 @@
     "prepare": "npx simple-git-hooks"
   },
   "peerDependencies": {
-    "eslint-plugin-readable-tailwind": ">=2.1.1"
+    "eslint-plugin-better-tailwindcss": ">=3.4.1"
   },
   "peerDependenciesMeta": {
-    "eslint-plugin-readable-tailwind": {
+    "eslint-plugin-better-tailwindcss": {
       "optional": true
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^4.12.0",
-    "eslint": "^9.25.1"
+    "@antfu/eslint-config": "^4.16.1",
+    "eslint": "^9.29.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "bumpp": "^10.1.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "bumpp": "^10.2.0",
+    "eslint-plugin-better-tailwindcss": "^3.4.1",
     "eslint-plugin-format": "^1.0.1",
-    "eslint-plugin-readable-tailwind": "^2.1.1",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^16.1.2",
     "simple-git-hooks": "^2.13.0",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "commitlint": {
