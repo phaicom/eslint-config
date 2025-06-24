@@ -1,7 +1,7 @@
 {
   "name": "@phaicom/eslint-config",
   "type": "module",
-  "version": "0.2.12",
+  "version": "0.3.0",
   "packageManager": "pnpm@10.12.3",
   "description": "Phaicom's config based on @antfu/eslint-config",
   "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com> (https://github.com/phaicom)",
