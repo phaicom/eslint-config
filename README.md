@@ -97,7 +97,7 @@ To enable Tailwind support and enforce consistent class ordering:
 
 1. Install the required plugin:
 ```bash
-pnpm i -D eslint-plugin-readable-tailwind@beta
+pnpm i -D eslint-plugin-better-tailwindcss
 ```
 
 2. Enable Tailwind support in your config:
