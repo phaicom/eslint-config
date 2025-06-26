@@ -23,6 +23,7 @@ export async function tailwind(): Promise<TypedFlatConfigItem[]> {
       rules: {
         // enable all recommended rules to error
         ...pluginTailwind.configs['recommended-error'].rules,
+        'better-tailwindcss/no-unregistered-classes': 'warn',
       },
     },
   ]
