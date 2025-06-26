@@ -6,7 +6,7 @@ Personal ESLint configuration preset.
 - Built on [antfu/eslint-config](https://github.com/antfu/eslint-config)
 - Enforces curly brackets for all blocks
 - Custom rule sets for unicorn, stylistic, and Vue
-- Tailwind support with [eslint-plugin-readable-tailwind](https://github.com/schoero/eslint-plugin-readable-tailwind)
+- Tailwind support with [eslint-plugin-better-tailwindcss](https://github.com/schoero/eslint-plugin-better-tailwindcss)
 
 ## Usage
 
