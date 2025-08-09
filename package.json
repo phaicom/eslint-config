@@ -43,16 +43,16 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^4.19.0",
-    "eslint": "^9.32.0"
+    "@antfu/eslint-config": "^5.2.0",
+    "eslint": "^9.33.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "bumpp": "^10.2.2",
-    "eslint-plugin-better-tailwindcss": "^3.7.3",
+    "eslint-plugin-better-tailwindcss": "^3.7.4",
     "eslint-plugin-format": "^1.0.1",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.1.5",
     "simple-git-hooks": "^2.13.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2"
