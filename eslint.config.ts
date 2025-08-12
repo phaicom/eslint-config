@@ -10,4 +10,9 @@ export default configs({
   rules: {
     'better-tailwindcss/no-unregistered-classes': 'error',
   },
+}, {
+  files: ['**/ui/**/*.ts', '**/ui/**/*.tsx', '**/tools/theme-provider.tsx'],
+  rules: {
+    'react-refresh/only-export-components': 'off',
+  },
 })
