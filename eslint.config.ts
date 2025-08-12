@@ -7,4 +7,7 @@ export default configs({
     css: true,
     html: true,
   },
+  rules: {
+    'better-tailwindcss/no-unregistered-classes': 'error',
+  },
 })

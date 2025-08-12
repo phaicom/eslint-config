@@ -8,6 +8,7 @@ const eslintConfig: EslintConfig = (options: OptionsConfig, ...configs) => {
     phaicom: enablePhaicom = true,
     tailwind: enableTailwind = false,
     vue: enableVue,
+    rules: customRules = {},
   } = options
 
   if (enableTailwind) {
@@ -22,7 +23,11 @@ const eslintConfig: EslintConfig = (options: OptionsConfig, ...configs) => {
     }
   }
 
-  return antfu(options, ...configs)
+  // Add custom rules after applied phaicom rules
+  configs.push({ rules: customRules })
+  const { rules, ...restOptions } = options
+
+  return antfu(restOptions, ...configs)
 }
 
 export default eslintConfig

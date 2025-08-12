@@ -43,13 +43,13 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^5.2.0",
+    "@antfu/eslint-config": "^5.2.1",
     "eslint": "^9.33.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "bumpp": "^10.2.2",
+    "bumpp": "^10.2.3",
     "eslint-plugin-better-tailwindcss": "^3.7.4",
     "eslint-plugin-format": "^1.0.1",
     "lint-staged": "^16.1.5",
