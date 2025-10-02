@@ -2,7 +2,7 @@
   "name": "@phaicom/eslint-config",
   "type": "module",
   "version": "0.7.2",
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.0",
   "description": "Phaicom's config based on @antfu/eslint-config",
   "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com> (https://github.com/phaicom)",
   "license": "MIT",
@@ -52,10 +52,10 @@
     "bumpp": "^10.2.3",
     "eslint-plugin-better-tailwindcss": "^3.7.9",
     "eslint-plugin-format": "^1.0.2",
-    "lint-staged": "^16.2.0",
+    "lint-staged": "^16.2.3",
     "simple-git-hooks": "^2.13.1",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "commitlint": {
     "extends": [
