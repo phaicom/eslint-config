@@ -4,7 +4,7 @@ import type { OptionsConfig as AntfuOptionsConfig, TypedFlatConfigItem as AntfuT
 type EslintConfigReturn = ReturnType<typeof antfu>
 type UserConfigParams = Parameters<typeof antfu>[1]
 
-export interface OptionsConfig extends AntfuOptionsConfig, AntfuTypedFlatConfigItem {
+export interface OptionsConfig extends Omit<AntfuOptionsConfig, 'ignores'>, Omit<AntfuTypedFlatConfigItem, 'ignores'> {
   /**
    * Used phaicom's base rules:
    * @default true
@@ -16,6 +16,7 @@ export interface OptionsConfig extends AntfuOptionsConfig, AntfuTypedFlatConfigI
    * @default false
    */
   tailwind?: boolean
+  ignores?: string[]
 }
 
 export type EslintConfig = (options: OptionsConfig, ...configs: UserConfigParams[]) =>
