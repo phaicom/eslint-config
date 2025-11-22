@@ -2,7 +2,7 @@
   "name": "@phaicom/eslint-config",
   "type": "module",
   "version": "0.9.0",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "description": "Phaicom's config based on @antfu/eslint-config",
   "author": "Reawpai Chunsoi <reawpai.chunsoi@gmail.com> (https://github.com/phaicom)",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "build": "tsup --clean --dts",
@@ -35,7 +35,7 @@
     "prepare": "npx simple-git-hooks"
   },
   "peerDependencies": {
-    "eslint-plugin-better-tailwindcss": ">=3.7.10"
+    "eslint-plugin-better-tailwindcss": ">=3.7.11"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-better-tailwindcss": {
@@ -50,9 +50,9 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "bumpp": "^10.3.1",
-    "eslint-plugin-better-tailwindcss": "^3.7.10",
+    "eslint-plugin-better-tailwindcss": "^3.7.11",
     "eslint-plugin-format": "^1.0.2",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.2.7",
     "simple-git-hooks": "^2.13.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
