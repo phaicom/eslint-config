@@ -1,12 +1,10 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-import { interopDefault } from '@antfu/eslint-config'
+import { ensurePackages, interopDefault } from '@antfu/eslint-config'
 
 export async function tailwind(): Promise<TypedFlatConfigItem[]> {
-  // Cannot specify version. Might have to write the function myself
-  // or wait for the plugin to get stable.
-  // await ensurePackages([
-  //   'eslint-plugin-better-tailwindcss',
-  // ])
+  await ensurePackages([
+    'eslint-plugin-better-tailwindcss',
+  ])
 
   const [
     pluginTailwind,
@@ -23,7 +21,7 @@ export async function tailwind(): Promise<TypedFlatConfigItem[]> {
       rules: {
         // enable all recommended rules to error
         ...pluginTailwind.configs['recommended-error'].rules,
-        'better-tailwindcss/no-unregistered-classes': 'warn',
+        'better-tailwindcss/no-unknown-classes': 'warn',
       },
     },
   ]

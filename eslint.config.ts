@@ -7,9 +7,6 @@ export default configs({
     css: true,
     html: true,
   },
-  rules: {
-    'better-tailwindcss/no-unregistered-classes': 'error',
-  },
 }, {
   files: ['**/ui/**/*.ts', '**/ui/**/*.tsx', '**/tools/theme-provider.tsx'],
   rules: {

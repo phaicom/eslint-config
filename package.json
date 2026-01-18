@@ -22,11 +22,11 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "tsup --clean --dts",
-    "stub": "tsup",
+    "build": "tsdown --clean --dts",
+    "stub": "tsdown",
     "dev": "npx @eslint/config-inspector --config eslint.config.ts",
     "build:inspector": "pnpm run build && npx @eslint/config-inspector build",
-    "watch": "tsup --watch",
+    "watch": "tsdown --watch",
     "prepack": "pnpm run build",
     "release": "bumpp && pnpm publish --access=public",
     "lint": "eslint . --cache",
@@ -35,7 +35,7 @@
     "prepare": "npx simple-git-hooks"
   },
   "peerDependencies": {
-    "eslint-plugin-better-tailwindcss": ">=3.7.11"
+    "eslint-plugin-better-tailwindcss": ">=4.0.1"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-better-tailwindcss": {
@@ -43,18 +43,19 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^6.7.3",
+    "@antfu/eslint-config": "^7.0.1",
     "eslint": "^9.39.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
     "bumpp": "^10.4.0",
-    "eslint-plugin-better-tailwindcss": "^3.8.0",
+    "eslint-plugin-better-tailwindcss": "^4.0.1",
     "eslint-plugin-format": "^1.3.1",
     "lint-staged": "^16.2.7",
     "simple-git-hooks": "^2.13.1",
-    "tsup": "^8.5.1",
+    "tailwindcss": "^4.1.18",
+    "tsdown": "0.20.0-beta.3",
     "typescript": "^5.9.3"
   },
   "commitlint": {
